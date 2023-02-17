@@ -11,10 +11,10 @@ jobs:
     env:
       BUCKET_NAME: cfst-3457-e632a2e50f7517279fabe79c6cfd-prodbucket-1rwno1s693ups
     steps:
-      - name: Check out code
+      - name: check out code
         uses: actions/checkout@v2
       - name: configure aws cli
-        uses: actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
